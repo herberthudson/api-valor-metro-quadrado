@@ -9,12 +9,8 @@
 		"dev": "nodemon src/index.ts",
 		"lint": "eslint --ext js,jsx,ts,tsx .",
 		"format": "prettier --write \"**/*.{ts,tsx,js,jsx,json}\"",
-		"test": "jest"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
+		"test": "jest",
+		"prepare": "husky install"
 	},
 	"lint-staged": {
 		"*.{ts,js,tsx,jsx}": [
@@ -23,7 +19,9 @@
 		],
 		"*.{json,graphql,gql}": [
 			"prettier --write"
-		]
+		],
+		"*.{js,jsx,ts,tsx}": "eslint --cache --fix",
+		"*.{ts,tsx,js,jsx,json}": "prettier --write"
 	},
 	"repository": {
 		"type": "git",
