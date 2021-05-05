@@ -8,7 +8,8 @@
 		"build": "tsc -p .",
 		"dev": "nodemon src/index.ts",
 		"lint": "eslint --ext js,jsx,ts,tsx .",
-		"format": "prettier --write \"**/*.{ts,tsx,js,jsx,json}\""
+		"format": "prettier --write \"**/*.{ts,tsx,js,jsx,json}\"",
+		"test": "jest"
 	},
 	"husky": {
 		"hooks": {
@@ -42,11 +43,14 @@
 	"homepage": "https://github.com/herberthudson/api-valor-metro-quadrado#readme",
 	"devDependencies": {
 		"@types/express": "^4.17.11",
+		"@types/jest": "^26.0.23",
 		"eslint": "^7.25.0",
 		"husky": "^6.0.0",
+		"jest": "^26.6.3",
 		"lint-staged": "^10.5.4",
 		"nodemon": "^2.0.7",
 		"prettier": "^2.2.1",
+		"ts-jest": "^26.5.5",
 		"ts-node": "^9.1.1",
 		"typescript": "^4.2.4"
 	},
