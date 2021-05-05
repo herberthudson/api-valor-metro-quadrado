@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+
+-   husky config
+
 ### Added
 
 -   init repsitory with package.json, changelog.md, editor config, typescript and config, expressjs, ts-node, nodemon, prettier config, docker and lint
+-   jest config
