@@ -21,22 +21,22 @@ export abstract class BaseController {
 		res: express.Response,
 		code: number,
 		message: string,
-	) {
-		return res.status(code).json({ message })
+	): void {
+		res.status(code).json({ message })
 	}
 
-	public ok<T>(res: express.Response, data?: T) {
-		if (!data) {
+	public ok<T>(res: express.Response, data?: T): void {
+		if (data) {
 			res.type('application/json')
-			return res.status(200).json(data)
+			res.status(200).json(data)
 		} else {
-			return res.sendStatus(200)
+			res.sendStatus(200)
 		}
 	}
 
-	public fail(res: express.Response, error: Error | string) {
+	public fail(res: express.Response, error: Error | string): void {
 		console.log(error)
-		return res.status(500).json({
+		res.status(500).json({
 			message: error.toString(),
 		})
 	}

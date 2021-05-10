@@ -20,3 +20,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 -   jest config
 -   github actions
 -   Controller to receive request and response square meter
+-   Model, Database and init some tests with jest and supertest
